@@ -1,24 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavBar from './components/navBar/NavBar';
+import Header from './components/header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Proximamente Tienda Online Ozuna
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <NavBar/>
+      <Header/>
+    </React.Fragment>
   );
 }
 

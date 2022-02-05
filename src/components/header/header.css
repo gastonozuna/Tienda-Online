@@ -1,0 +1,8 @@
+
+.headerBox{
+    width: 100%;
+    height: 400px;
+    background-image: url(./headerImages/bg-header.jpg);
+    background-position: cover;
+}
+
