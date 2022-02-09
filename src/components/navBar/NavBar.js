@@ -1,6 +1,7 @@
 import React from 'react';
 import './navBar.css';
 import './categories';
+import {CartWidget} from '../CartWidget/CartWidget';
 
 const logo = require('./navBarImages/logoCogosaurio.png');
 
@@ -29,6 +30,8 @@ function NavBar() {
             <a href='#'/><div className='navSearchButton'><i className="fas fa-search"></i></div><a/>
             </div>
             <a href='#'/><div className='navButton'>Iniciar sesion/Registrarse</div><a/>
+            <CartWidget/>
+        
         </nav>
 
     )

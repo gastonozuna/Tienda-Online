@@ -1,0 +1,9 @@
+.fa-shopping-cart{
+    font-size: 1.8vw;
+}
+
+.cartButton{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
