@@ -1,0 +1,55 @@
+.counterBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 230px;
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.productInfo{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+}
+
+.productNum{
+    font-size: 20px;
+    color: black;
+}
+
+.btnBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.counterBtn{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    font-size: 30px;
+    border: none;
+    background-color: rgb(221, 221, 221);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addToCartButton{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(48, 48, 48);
+    color: wheat;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+}

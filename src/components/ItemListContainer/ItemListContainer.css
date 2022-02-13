@@ -1,5 +1,6 @@
 .ItemListCointainer{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgb(75, 75, 75);

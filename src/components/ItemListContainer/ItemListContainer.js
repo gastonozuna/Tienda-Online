@@ -1,11 +1,11 @@
 import './ItemListContainer.css';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({greeting, children}) => {
 
         return(
             <>
-            <div className='ItemListCointainer'>
-                <h3>{greeting}</h3>
+            <div className='ItemListCointainer'>    
+                {children}
             </div>
             </>
         )   
