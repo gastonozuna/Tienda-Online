@@ -5,7 +5,10 @@ const ItemListContainer = ({greeting, children}) => {
         return(
             <>
             <div className='ItemListCointainer'>    
-                {children}
+                {children[0]}
+                {children[1]}
+                {children[2]}
+                {children[3]}
             </div>
             </>
         )   
