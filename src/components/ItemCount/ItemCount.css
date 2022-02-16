@@ -1,15 +1,21 @@
 .counterBox{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 250px;
-    height: 230px;
+    width: 300px;
+    height: 100px;
     background-color: rgb(221, 221, 221);
     color: rgb(0, 0, 0);
     margin: 5px;
-    padding: 5px;
+    padding: 0px 5px 5px 5px;
     border-radius: 10px;
+}
+
+.productImage{
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
 }
 
 .productInfo{
@@ -53,3 +59,9 @@
     padding: 10px;
     cursor: pointer;
 }
+
+.addToCartButton:hover{
+    background-color: rgb(122, 122, 122);
+    transition: 500ms;
+}
+

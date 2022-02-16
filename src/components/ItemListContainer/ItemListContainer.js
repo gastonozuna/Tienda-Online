@@ -1,14 +1,13 @@
 import './ItemListContainer.css';
+import ItemList from '../ItemList/ItemList';
+import Item from '../ItemList/ItemList';
 
-const ItemListContainer = ({greeting, children}) => {
+const ItemListContainer = () => {
 
         return(
             <>
-            <div className='ItemListCointainer'>    
-                {children[0]}
-                {children[1]}
-                {children[2]}
-                {children[3]}
+            <div className='ItemListCointainer'> 
+                <ItemList initial={1} stock={5} item={Item}/>
             </div>
             </>
         )   
