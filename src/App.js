@@ -10,9 +10,7 @@ function App() {
     <React.Fragment>
       <NavBar/>
       <Header/>
-      <ItemListContainer>
-        
-      </ItemListContainer>
+      <ItemListContainer/>
     </React.Fragment>
   );
 }
