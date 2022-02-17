@@ -8,8 +8,8 @@ const Item = (props) => {
 
     return(
         <>
-            <div key={props.key} className="item">
-                <div className="imgItem">Imagen del producto</div>
+            <div className="item">
+                <img src={props.img} className="imgItem" alt="Imagen del producto"></img>
                 <h3>{props.name}</h3>
                 <p>{props.description}</p>
                 <button onClick={showMore} className='showMoreButton'>Mostrar mas</button>

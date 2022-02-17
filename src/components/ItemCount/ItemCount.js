@@ -4,7 +4,7 @@ import './ItemCount.css';
 const CounterBtn = (props) => {
 
     const [num, setNum] = useState(props.initial);
-    console.log(props);
+    
     const onAdd = () => {
         if(num < props.stock){
             setNum(num+1);
