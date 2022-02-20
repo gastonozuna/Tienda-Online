@@ -5,6 +5,7 @@ import budhaImg from '../ItemListContainer/productsImages/budhaProduct.png';
 import floraImg from '../ItemListContainer/productsImages/floraProduct.png';
 import raImg from '../ItemListContainer/productsImages/raProduct.png';
 import zeusImg from '../ItemListContainer/productsImages/zeusProduct.png';
+import { ItemDetailContainer } from '../ItemDetail/ItemDetailContainer';
 
 const ItemListContainer = () => {
 
@@ -19,7 +20,7 @@ const ItemListContainer = () => {
     const promise = new Promise((resolve, reject)=>{
         setTimeout(()=>{
             resolve(products);
-        },3000);
+        },2000);
     });
     
     useEffect(()=> {
@@ -32,11 +33,11 @@ const ItemListContainer = () => {
             <>
             <div className='ItemListCointainer'> 
                 <ItemList data={data}/>
+                <ItemDetailContainer items={data}/>
             </div>
             </>
         )   
 
 }
-
 
 export default ItemListContainer;

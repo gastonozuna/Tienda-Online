@@ -3,7 +3,7 @@ import CounterBtn from "../ItemCount/ItemCount";
 const Item = (props) => {
 
     const showMore = () =>{
-        console.log('mostrar mas de: ', props.name)
+        console.log('mostrar mas de: ', props.id);
     }
 
     return(
@@ -16,7 +16,7 @@ const Item = (props) => {
                 <span>Stock: {props.stock}</span>
                 <span>Costo: {props.price}</span>
                 <span id="info"></span>
-                <CounterBtn stock={props.stock} initial={1}/>
+                <CounterBtn stock={props.stock} initial={1} name={props.name}/>
             </div>
         </>
     )

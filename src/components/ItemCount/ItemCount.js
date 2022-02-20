@@ -20,7 +20,7 @@ const CounterBtn = (props) => {
     };
 
     const addToCart = () => {
-        console.log('add' , num)
+        console.log('add' , num, 'de', props.name)
     }
 
 

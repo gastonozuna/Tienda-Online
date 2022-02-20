@@ -5,7 +5,6 @@ const ItemList = (props) => {
 
     const products = props.data;
     
-    
     return(
         <>
             <div className="itemBox">
@@ -17,7 +16,7 @@ const ItemList = (props) => {
                 products.map(product=>
 
                     <Item key={product.id} id={product.id} name={product.name} description={product.description} 
-                    price={product.price} img={product.pictureUrl} stock={product.stock}/>
+                    price={product.price} img={product.pictureUrl} stock={product.stock} />
                 
                 )}
             </div>
