@@ -1,33 +1,45 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 import { ItemDetail } from "./ItemDetail";
+import { dataProducts } from "../data/Productos";
+import { useParams } from "react-router-dom";
 
-export const ItemDetailContainer = ({items}) => {
+export const ItemDetailContainer = () => {
 
-    const [itemDetail, setItemDetail] = useState([]);
+    const [product, setProduct] = useState(undefined);
+    const {id} = useParams();
 
-    const promise = new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            resolve(items);
-        }, 2000);
-    })
-    
-    const getItems = () =>{
-        items.map((item)=>{
-            console.log(item);
-        });
-    }
-    useEffect(()=>{
-        promise.then(result=>{
-            setItemDetail(result);
+    const getItems = (productId) => {
+
+        return new Promise((resolve, reject)=>{
+            const arrProducts = dataProducts;
+            const foundProduct = arrProducts.find((element) => element.id === productId);
+            setTimeout(()=>{
+                resolve(foundProduct);
+            },2000);
         })
-    }, []);
-    
 
-    getItems();
+    }
+
+    useEffect(()=>{
+        const getProduct = async (id) => {
+            const response = await getItems(id);
+            console.log('respuesta', response);
+            setProduct(response);
+        }
+        getProduct(id)
+    }, [id]);
+    
+    console.log('parametro recibido', id);
+    console.log('producto', product);
+
     return(
         <>
-            <ItemDetail item={items} name={items.name}/>
+            <div className='ItemDetailCointainer'>
+                <ItemDetail item={product} />
+            </div>
         </>
     )
 
 }
+
+export default ItemDetailContainer;

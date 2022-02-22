@@ -2,6 +2,7 @@ import React from 'react';
 import './navBar.css';
 import './categories';
 import {CartWidget} from '../CartWidget/CartWidget';
+import {Link, NavLink} from 'react-router-dom';
 
 const logo = require('./navBarImages/logoCogosaurio.png');
 
@@ -11,7 +12,7 @@ function NavBar() {
 
         <nav className='navBar'>
             <a href='#'/><div><img className='navLogo' src={logo}/></div><a/>
-            <a href='#'/><div className='navButton'>Inicio</div><a/>
+            <NavLink to='/' className='navButton' activeClassName='active'>Inicio</NavLink>
             <a href='#'/><div className='navButton' id='categories'>Categorias 
             </div><a/>
             <div className='categoriesBox'>
@@ -29,8 +30,10 @@ function NavBar() {
             <input type='text' placeholder=' Buscar...'></input>
             <a href='#'/><div className='navSearchButton'><i className="fas fa-search"></i></div><a/>
             </div>
-            <a href='#'/><div className='navButton'>Iniciar sesion/Registrarse</div><a/>
-            <CartWidget/>
+            <Link to='/' className='navButton' >Iniciar sesion/Registrarse</Link>
+            <NavLink to='/Cart' activeClassName='active'>
+                <CartWidget/>
+            </NavLink>
         
         </nav>
 

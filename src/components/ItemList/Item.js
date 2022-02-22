@@ -1,9 +1,10 @@
 import CounterBtn from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
 
-    const showMore = () =>{
-        console.log('mostrar mas de: ', props.id);
+    const showMore = (e) =>{
+        console.log(e.target);
     }
 
     return(
@@ -12,7 +13,9 @@ const Item = (props) => {
                 <img src={props.img} className="imgItem" alt="Imagen del producto"></img>
                 <h3>{props.name}</h3>
                 <p>{props.description}</p>
-                <button onClick={showMore} className='showMoreButton'>Mostrar mas</button>
+                <Link to='/items'>
+                    <button id={props.id} className='showMoreButton'>Detalles</button>
+                </Link>
                 <span>Stock: {props.stock}</span>
                 <span>Costo: {props.price}</span>
                 <span id="info"></span>
