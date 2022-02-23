@@ -5,17 +5,11 @@
     align-items: center;
     width: 300px;
     height: 100px;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     margin: 5px;
     padding: 0px 5px 5px 5px;
     border-radius: 10px;
-}
-
-.productImage{
-    width: 300px;
-    height: 250px;
-    border-radius: 5px;
 }
 
 .productInfo{
@@ -45,7 +39,7 @@
     margin: 5px;
     font-size: 30px;
     border: none;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     cursor: pointer;
 }
