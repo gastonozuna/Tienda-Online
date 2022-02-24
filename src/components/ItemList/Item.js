@@ -9,12 +9,11 @@ const Item = (props) => {
                 <img src={props.img} className="imgItem" alt="Imagen del producto"></img>
                 <h3>{props.name}</h3>
                 <p className="itemDescription">{props.description}</p>
-                <Link to='/items'>
+                <Link to={`/items/${props.id}`}>
                     <button id={props.id} className='showMoreButton'>Detalles</button>
                 </Link>
                 <span>Stock: {props.stock}</span>
                 <span>Costo: ${props.price}</span>
-                <span id="info"></span>
                 <CounterBtn stock={props.stock} initial={1} name={props.name}/>
             </div>
         </>

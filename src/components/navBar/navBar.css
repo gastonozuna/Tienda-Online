@@ -30,6 +30,7 @@
 .categoriesBox{
     display: none;
     position: absolute;
+    left: 25%;
     flex-direction: row;
     width: 200px;
     height: 300px;
@@ -40,7 +41,7 @@
 }
 
 .catLinksBox{
-    margin: 10px;
+    margin: 15px 10px 20px 10px;
 }
 
 
