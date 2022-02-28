@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './ItemCount.css';
 
-const CounterBtn = (props) => {
+const CounterBtn = (props, {handleCart}) => {
 
     const [num, setNum] = useState(props.initial);
     
@@ -20,7 +20,9 @@ const CounterBtn = (props) => {
     };
 
     const addToCart = () => {
-        console.log('add' , num, 'de', props.name)
+        console.log('add' , num, 'de', props.name);
+        /*let inCart = {itemName: props.name, quantity: num}
+        return(inCart);*/
     }
 
 
@@ -31,7 +33,7 @@ const CounterBtn = (props) => {
                 <p className="productNum">{num}</p>
                 <button className="counterBtn" id='buttonAdd' onClick={onAdd}>+</button>
             </div>
-            <button className="addToCartButton" onClick={addToCart} >Agregar al carrito</button>
+            <button className="addToCartButton" onClick={()=>addToCart} >Agregar al carrito</button>
         </div>
     );
 };

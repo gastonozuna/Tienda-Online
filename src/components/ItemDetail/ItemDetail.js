@@ -1,7 +1,6 @@
 import CounterBtn from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
-import { dataProducts } from '../data/Productos';
 
 export const ItemDetail = ({item}) => {
 

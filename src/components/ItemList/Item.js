@@ -1,7 +1,15 @@
 import CounterBtn from "../ItemCount/ItemCount";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
+
+    const [inCart, setInCart] = useState('');
+
+    const onAdd = (count) => {
+        setInCart(count);
+        console.log('onAdd', count);
+    }
 
     return(
         <>
@@ -14,7 +22,8 @@ const Item = (props) => {
                 </Link>
                 <span>Stock: {props.stock}</span>
                 <span>Costo: ${props.price}</span>
-                <CounterBtn stock={props.stock} initial={1} name={props.name}/>
+                <CounterBtn stock={props.stock} initial={1} name={props.name} 
+                handleCart={(count)=>onAdd(count)}/>
             </div>
         </>
     )
