@@ -8,8 +8,6 @@ const logo = require('./navBarImages/logoCogosaurio.png');
 
 function NavBar() {
 
-    const {cartCount} = useContext(CartContext);
-
     const showCategories = () => {
     
         const categoriesBox = document.querySelector('.categoriesBox');
@@ -59,7 +57,7 @@ function NavBar() {
             </div>
             <Link to='/' className='navButton' >Iniciar sesion/Registrarse</Link>
             <NavLink to='/Cart' activeclassname='active'>
-                <CartWidget count={cartCount}/>
+                <CartWidget count={0}/>
             </NavLink>
         
         </nav>
