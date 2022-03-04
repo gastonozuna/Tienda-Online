@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import NavBar from './components/navBar/NavBar';
 import Header from './components/header/Header';
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/items/:id' element={<ItemDetailContainer/>}/>
-          <Route path='/category/:id' element={<ItemListContainer/>}/>
+          <Route path='/category/Namaste' element={<ItemListContainer/>}/>
           <Route path='/Cart' element={<Cart/>}></Route>
         </Routes>
       </CartProvider>

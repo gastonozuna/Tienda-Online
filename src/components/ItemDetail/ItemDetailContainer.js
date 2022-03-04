@@ -15,6 +15,7 @@ export const ItemDetailContainer = () => {
             const foundProduct = arrProducts.find((element) => element.id === productId);
             setTimeout(()=>{
                 resolve(foundProduct);
+                console.log('found',foundProduct);
             },1000);
         })
 
@@ -26,14 +27,14 @@ export const ItemDetailContainer = () => {
             console.log('respuesta', response);
             setProduct(response);
         }
-        console.log(product);
         getProduct(id)
     }, [id]);
-
+    
+    console.log('product',product);
     return(
         <>
             <div className='ItemDetailCointainer'>
-                <ItemDetail item={product} />
+                <ItemDetail item={product} initial={1} />
             </div>
         </>
     )

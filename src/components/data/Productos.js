@@ -6,7 +6,8 @@ export const dataProducts = [
         price:3000,
         category:'Namaste',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_940416-MLA44157836633_112020-AB.webp', 
-        stock:5},
+        stock:5,
+        initial:1},
 
     {   id:'clon', 
         name:'Clonaste Namaste', 
@@ -15,7 +16,8 @@ export const dataProducts = [
         price:3000, 
         category:'Namaste',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_745747-MLA44361719639_122020-AB.webp', 
-        stock:5},
+        stock:5,
+        initial:1},
 
     {   id:'oro', 
         name:'Namaste Oro Negro', 
@@ -24,7 +26,8 @@ export const dataProducts = [
         price:600,
         category:'Namaste',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_817709-MLA47007342929_082021-AB.webp', 
-        stock:5},
+        stock:5,
+        initial:1},
 
     {   id:'melac', 
         name:'Melaca Dorada', 
@@ -33,6 +36,7 @@ export const dataProducts = [
         price:600,
         category:'Melaca',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_833347-MLA46890543329_072021-AB.webp', 
-        stock:5}
+        stock:5,
+        initial:1}
 
 ];
