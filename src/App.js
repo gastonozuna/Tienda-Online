@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import NavBar from './components/navBar/NavBar';
 import Header from './components/header/Header';
@@ -6,13 +6,14 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Cart} from './components/Cart/Cart';
-import { CartProvider } from './components/Context/CartContext';
+import CartProvider, { CartContext } from './components/Context/CartContext';
+
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <CartProvider>
+    <CartProvider>
+      <BrowserRouter>
       <NavBar/>
       <Header/>
         <Routes>
@@ -21,8 +22,8 @@ function App() {
           <Route path='/category/Namaste' element={<ItemListContainer/>}/>
           <Route path='/Cart' element={<Cart/>}></Route>
         </Routes>
-      </CartProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

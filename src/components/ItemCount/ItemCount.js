@@ -25,13 +25,6 @@ const CounterBtn = (props, {onAddItem}) => {
     const counterBox = document.querySelector('.counterBox');
     const endBuyBox = document.querySelector('.endBuyBox');
 
-    /*const onAddItem = (quiantity) => {
-        console.log('onAddItem', quiantity)
-        alert(`Agregaste ${quiantity} del producto: ${props.name} al carrito`)
-        counterBox.style.display = 'none';
-        endBuyBox.style.display = 'flex';
-    }*/
-
 
     return (
         <>

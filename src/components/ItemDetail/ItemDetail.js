@@ -6,15 +6,16 @@ import { CartContext } from '../Context/CartContext';
 
 export const ItemDetail = ({item}) => {
 
-    console.log('item', item)
-
     const [cartItems , setCartItems] = useState(0);
     const {addItem} = useContext(CartContext);
     
-    const onAdd = (quantity) => {
-        console.log('onAdd', quantity);
+    
+    const cartContext = useContext(CartContext);
+    const {cart, addToCart} = cartContext;
+    
+    const onAddItem = (quantity) => {
+        addToCart(item, quantity);
     }
-
 
     return(
         <>
@@ -29,7 +30,7 @@ export const ItemDetail = ({item}) => {
             <span>Stock: {item.stock}</span>
             <span>Costo: ${item.price}</span>
             <CounterBtn stock={item.stock} name={item.name}
-              initial={1} onAddItem={onAdd}/>
+              initial={1} onAddItem={onAddItem}/>
         </div>
         </>
     )

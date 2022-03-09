@@ -20,8 +20,6 @@ function NavBar() {
 
     }
 
-    const {cartCount} = useContext(CartContext);
-
     return(
 
         <nav className='navBar'>
@@ -59,7 +57,7 @@ function NavBar() {
             </div>
             <Link to='/' className='navButton' >Iniciar sesion/Registrarse</Link>
             <NavLink to='/Cart' activeclassname='active'>
-                <CartWidget count={cartCount}/>
+                <CartWidget count={0}/>
             </NavLink>
         
         </nav>

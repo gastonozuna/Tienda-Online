@@ -15,7 +15,6 @@ export const ItemDetailContainer = () => {
             const foundProduct = arrProducts.find((element) => element.id === productId);
             setTimeout(()=>{
                 resolve(foundProduct);
-                console.log('found',foundProduct);
             },1000);
         })
 
@@ -24,13 +23,11 @@ export const ItemDetailContainer = () => {
     useEffect(()=>{
         const getProduct = async (id) => {
             const response = await getItems(id);
-            console.log('respuesta', response);
             setProduct(response);
         }
         getProduct(id)
     }, [id]);
     
-    console.log('product',product);
     return(
         <>
             <div className='ItemDetailCointainer'>
