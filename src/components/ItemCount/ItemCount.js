@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import './ItemCount.css';
 
 
-const CounterBtn = (props, {onAddItem}) => {
+const CounterBtn = ({stock, initial, onAddItem}) => {
 
-    const [count, setCount] = useState(props.initial);
+    const [count, setCount] = useState(initial);
 
     const onAdd = () => {
-        if(count < props.stock){
+        if(count < stock){
             setCount(count+1);
         }else {
             alert('MAXIMO STOCK');
@@ -17,14 +17,18 @@ const CounterBtn = (props, {onAddItem}) => {
     };
 
     const onRemove = () => {
-        if(count > props.initial){
+        if(count > initial){
             setCount(count-1);
         }
     };
     
     const counterBox = document.querySelector('.counterBox');
     const endBuyBox = document.querySelector('.endBuyBox');
-
+    
+    const endBuy = () => {
+        counterBox.style.display = 'none';
+        endBuyBox.style.display = 'flex';
+    }
 
     return (
         <>
@@ -34,10 +38,13 @@ const CounterBtn = (props, {onAddItem}) => {
                 <p className="productNum">{count}</p>
                 <button className="counterBtn" id='buttonAdd' onClick={onAdd}>+</button>
             </div>
-            <button className="addToCartButton" onClick={()=>onAddItem(count)} > Agregar al carrito</button>
+            <button className="addToCartButton" onClick={()=> {onAddItem(count); endBuy()}} > Agregar al carrito</button>
         </div>
 
         <div className="endBuyBox">
+            <Link to='/'>
+                <button className="endBuyButton">Seguir comprando</button>
+            </Link>
             <Link to='/Cart'>
                 <button className="endBuyButton"><i className="fas fa-shopping-cart"></i>  Terminar mi compra</button>
             </Link>

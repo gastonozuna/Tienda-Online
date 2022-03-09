@@ -24,7 +24,7 @@ function NavBar() {
 
         <nav className='navBar'>
             <Link to='/'>
-                <a href='#'/><div><img className='navLogo' src={logo}/></div><a/>
+                <div><img className='navLogo' src={logo}/></div>
             </Link>
             <NavLink to='/' className='navButton' activeclassname='active'>Inicio</NavLink>
 

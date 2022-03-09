@@ -9,19 +9,15 @@ export const ItemDetail = ({item}) => {
     const [cartItems , setCartItems] = useState(0);
     const {addItem} = useContext(CartContext);
     
-    
     const cartContext = useContext(CartContext);
     const {cart, addToCart} = cartContext;
-    
+
     const onAddItem = (quantity) => {
         addToCart(item, quantity);
     }
 
     return(
         <>
-        <Link to='/'>
-            <button className='backButton'><i className="far fa-arrow-alt-circle-left"></i> Volver</button>
-        </Link>
         <div className='ItemDetail'>
             <img src={item.pictureUrl}></img>
             <h3>{item.name}</h3>

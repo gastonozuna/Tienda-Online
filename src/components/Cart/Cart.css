@@ -2,8 +2,82 @@
     width: 100%;
     height: 500px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    background-color: azure;
+    background-color: #343a40;
+}
+
+.cartData{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.clearCart{
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 5px;
+    background: none;
+    margin: 10px;
+}
+
+.clearCart:hover{
+    background-color: #383838;
+    color: aliceblue;
+    transition: 600ms;
+}
+
+.cartBox h2{
+    align-self: center;
+    color: aliceblue;
+}
+
+.itemInCart{
+    display: flex;
+    flex-direction: row;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    height: auto;
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+.itemInCart h3{
+    color: rgb(0, 0, 0);
+}
+
+.itemInCart img{
+    width: 120px;
+    height: 100%;
+}
+
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 0px 10px;
+}
+
+.deleteItem{
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+    color: #000000;
+}
+
+/* empty cart */
+
+.cartEmptyBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #343a40;
+}
+
+.cartEmptyBox p{
+    margin-top: 100px;
+    font-size: 40px;
 }

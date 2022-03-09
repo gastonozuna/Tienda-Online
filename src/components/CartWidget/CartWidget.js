@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { Cart } from '../Cart/Cart';
 import { CartContext } from '../Context/CartContext';
 import './CartWidget.css';
 
@@ -7,8 +6,6 @@ export const CartWidget = () => {
 
     const cartContext = useContext(CartContext);
     const {cart} = cartContext;
-
-    console.log(cart);
 
         return(
             

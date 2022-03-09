@@ -6,7 +6,7 @@ export const dataProducts = [
         price:3000,
         category:'Namaste',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_940416-MLA44157836633_112020-AB.webp', 
-        stock:5,
+        stock:10,
         initial:1},
 
     {   id:'clon', 
@@ -16,7 +16,7 @@ export const dataProducts = [
         price:3000, 
         category:'Namaste',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_745747-MLA44361719639_122020-AB.webp', 
-        stock:5,
+        stock:8,
         initial:1},
 
     {   id:'oro', 
@@ -26,7 +26,7 @@ export const dataProducts = [
         price:600,
         category:'Namaste',
         pictureUrl:'https://http2.mlstatic.com/D_Q_NP_817709-MLA47007342929_082021-AB.webp', 
-        stock:5,
+        stock:7,
         initial:1},
 
     {   id:'melac', 

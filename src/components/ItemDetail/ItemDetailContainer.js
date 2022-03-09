@@ -2,6 +2,7 @@ import { useEffect, useState, } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { dataProducts } from "../data/Productos";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
 
@@ -17,7 +18,6 @@ export const ItemDetailContainer = () => {
                 resolve(foundProduct);
             },1000);
         })
-
     }
 
     useEffect(()=>{
@@ -31,6 +31,9 @@ export const ItemDetailContainer = () => {
     return(
         <>
             <div className='ItemDetailCointainer'>
+            <Link to='/'>
+                <button className='backButton'><i className="far fa-arrow-alt-circle-left"></i> Volver</button>
+            </Link>
                 <ItemDetail item={product} initial={1} />
             </div>
         </>

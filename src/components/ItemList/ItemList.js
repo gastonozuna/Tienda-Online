@@ -1,5 +1,6 @@
 import './ItemList.css';
 import Item from './Item';
+import { Loader } from '../Loader/loader';
 
 const ItemList = (props) => {
 
@@ -10,7 +11,7 @@ const ItemList = (props) => {
             <div className="itemBox">
                 {props.data.length === 0 ?
                 <div>
-                    <span className="loading">cargando...</span>
+                    <Loader/>
                 </div>
                 :
                 products.map(product=>
