@@ -18,10 +18,6 @@ export const Cart = () => {
             <button className='backButton'><i className="far fa-arrow-alt-circle-left"></i> Volver</button>
             </Link>
 
-        
-            <p className='cartData'>Productos en carrito: {cart.length}</p>
-            <p className='cartData'>Precio total: ${cart.reduce((acum, item)=> acum + (item.price * item.quantity),0)}</p>
-            <button className='clearCart' onClick={clearCart}>Limpar Carrito</button>
 
             <div className='cartBox'>
                 <h2>Carrito </h2>
@@ -39,6 +35,16 @@ export const Cart = () => {
                         </div>
                     </div>
                 )})}
+            </div>
+            
+            <div className='dataCart'>
+                <p className='cartData'>Productos en carrito: {cart.length}</p>
+                <p className='cartData'>Precio total: ${cart.reduce((acum, item)=> acum + (item.price * item.quantity),0)}</p>
+                
+                <div>
+                    <button className='clearCart' onClick={clearCart}>Limpar Carrito</button>
+                    <button className='endBuy' onClick={()=> console.log('Fin de compra')}>Finalizar Compra</button>
+                </div>
             </div>
             </>
         )

@@ -6,15 +6,19 @@ export const CartWidget = () => {
 
     const cartContext = useContext(CartContext);
     const {cart} = cartContext;
-
+    console.log(cart);
         return(
-            
-            <div>
+            <>
+                <div>
                 <button className='cartButton'>
                 <i className="fas fa-shopping-cart"></i>
-                <span>  {cart.length}</span>
+                {cart.length !== 0 ?
+                <span>  {cart.reduce((acum, item) => acum + item.quantity, 0)}</span>
+                : ""
+                }
                 </button>
-            </div>
+                </div>
+        </>
     )
 
 }
