@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     width: 300px;
-    height: 100px;
+    height: 150px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     margin: 5px;
@@ -20,6 +20,7 @@
 
 .productNum{
     font-size: 20px;
+    margin: 5px;
     color: black;
 }
 
@@ -34,13 +35,13 @@
 }
 
 .counterBtn{
-    width: 30px;
-    height: 30px;
-    margin: 5px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin: 10px;
     font-size: 30px;
     border: none;
     background-color: rgb(255, 255, 255);
-    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -76,5 +77,10 @@
     padding: 10px;
     margin: 10px;
     cursor: pointer;
+}
+
+.det{
+    font-size: 20px;
+    color: wheat;
 }
 

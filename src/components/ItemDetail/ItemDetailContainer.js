@@ -4,12 +4,38 @@ import { dataProducts } from "../data/Productos";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export const ItemDetailContainer = () => {
+/* firebase */
 
-    const [product, setProduct] = useState([]);
+import { getDocs, doc, getDoc} from "firebase/firestore";
+import { db } from "../utils/firebase";
+
+export const ItemDetailContainer = () => {
+    
     const {id} = useParams();
 
-    const getItems = (productId) => {
+    /*db FireBase*/
+
+    const [selectedItem, setSelectedItem] = useState();
+    const [products, setProducts] = useState([]);
+
+    const getSelectedItem = async () =>{
+
+        try {
+            const document = doc(db, 'items', id);
+            const response = await getDoc(document);
+            const result = {id: response.id, ...response.data()};
+            setSelectedItem(result.filter(e=> e.id === id));
+            console.log(result);
+        } catch (error) {
+            console.error('error', error)
+        }
+        
+        useEffect(()=> {
+            getSelectedItem();
+        }, [id]);
+        
+    }
+    /*const getItems = (productId) => {
 
         return new Promise((resolve, reject)=>{
             const arrProducts = dataProducts;
@@ -23,10 +49,10 @@ export const ItemDetailContainer = () => {
     useEffect(()=>{
         const getProduct = async (id) => {
             const response = await getItems(id);
-            setProduct(response);
+            setSelectedItem(response);
         }
         getProduct(id)
-    }, [id]);
+    }, [id]);*/
     
     return(
         <>
@@ -34,7 +60,7 @@ export const ItemDetailContainer = () => {
             <Link to='/'>
                 <button className='backButton'><i className="far fa-arrow-alt-circle-left"></i> Volver</button>
             </Link>
-                <ItemDetail item={product} initial={1} />
+                <ItemDetail item={selectedItem} initial={1} />
             </div>
         </>
     )

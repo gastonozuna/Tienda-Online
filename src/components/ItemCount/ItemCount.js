@@ -46,7 +46,7 @@ const CounterBtn = ({stock, initial, onAddItem}) => {
                 <button className="endBuyButton">Seguir comprando</button>
             </Link>
             <Link to='/Cart'>
-                <button className="endBuyButton"><i className="fas fa-shopping-cart"></i>  Terminar mi compra</button>
+                <button className="endBuyButton"><i className="fas fa-shopping-cart det"></i>  Terminar mi compra</button>
             </Link>
         </div>
         </>
