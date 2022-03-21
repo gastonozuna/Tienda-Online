@@ -29,11 +29,11 @@ function NavBar() {
             <NavLink to='/' className='navButton' activeclassname='active'>Inicio</NavLink>
 
             <Link to='/items/categoryId'>
-            <div  className='navButton' id='categories'>Categoria1 
+            <div  className='navButton' id='categories'>Sustratos 
             </div>
             </Link>
 
-            <Link to='/items/categoryId'>Categoria2</Link>
+            <Link to='/items/categoryId'>Fertilizantes</Link>
             <div className='categoriesBox'>
                 
                 

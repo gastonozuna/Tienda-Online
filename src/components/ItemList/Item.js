@@ -15,7 +15,7 @@ const Item = (props) => {
             <div className="item">
                 <img src={props.img} className="imgItem" alt="Imagen del producto"></img>
                 <h3>{props.name}</h3>
-                <p className="itemDescription">{props.description}</p>
+                <p className="itemDescription">{props.info}</p>
                 <span>Stock: {props.stock}</span>
                 <span>Costo: ${props.price}</span>
                 <Link to={`/items/${props.id}`}>

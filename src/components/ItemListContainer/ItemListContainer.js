@@ -8,7 +8,7 @@ import { db } from '../utils/firebase';
 
 const ItemListContainer = () => {
 
-    const {categoryId} = useParams();
+    const {id} = useParams();
 
     const [items, setItems] = useState([]);
     
@@ -32,7 +32,9 @@ const ItemListContainer = () => {
         try {
             const itemsCollection = collection(db, 'items');
             const col = await getDocs(itemsCollection);
-            const result = col.docs.map((doc)=> doc = {id: doc.id, ...doc.data()});
+            const result = col.docs.map(
+                (doc)=> (doc = { id: doc.id, ...doc.data() })
+            );
             setItems(result);
             console.log(result);
         } catch (error) {
@@ -56,10 +58,11 @@ const ItemListContainer = () => {
 
     const getDataCategory_query = async () => {
         try{
-
-            const q = query(collection(db, 'items'), where('categoryId', '==', categoryId));
+            const q = query(collection(db, 'items'), where('categoryId', '==', id));
             const querySnaptshot = await getDocs(q);
-            setItems(querySnaptshot.docs.map((doc) => doc = {id: doc.id, ...doc.data() }));
+            setItems(
+                querySnaptshot.docs.map((doc) => (doc = {id: doc.id, ...doc.data() }))
+            );
         } catch (error) {
             console.warn('error', error)
         }
@@ -67,8 +70,8 @@ const ItemListContainer = () => {
     }
 
     useEffect(()=> {
-        categoryId ? getDataCategory_query() : getData();
-    }, [categoryId])
+        id ? getDataCategory_query() : getData();
+    }, [id]);
 
         return(
             <>
