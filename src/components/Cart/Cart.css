@@ -2,26 +2,42 @@
     width: 100%;
     height: auto;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #343a40;
 }
 
+h2{
+    align-self: center;
+}
+
+.cartItems{
+    width: 100%;
+}
 
 .cartBox h2{
     align-self: center;
     color: aliceblue;
 }
 
+.itemOrder{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+
 .itemInCart{
     display: flex;
     flex-direction: row;
     color: rgb(0, 0, 0);
-    width: 50%;
+    width: 100%;
     height: auto;
     background-color: #ffffff;
-    margin: 10px;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    font-size: 1.5vw;
 }
 
 .itemInCart h3{
@@ -40,16 +56,18 @@
 }
 
 .deleteItem{
-    width: 70px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin: 5px;
-    font-size: 15px;
+    font-size: medium;
     color: #000000;
+    border: 1px solid #000000;
 }
 
 .deleteItem:hover{
-    background-color: rgba(228, 47, 47, 0.747);
+    background-color: rgba(223, 19, 19, 0.747);
     transition: 400ms;
+    color: #ffffff;
 }
 
 /* data cart */
@@ -59,8 +77,8 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    color: #ffffff;
     background-color: #343a40;
-    color: aliceblue;
 }
 
 .cartData{
@@ -71,10 +89,10 @@
 .clearCart{
     width: 100px;
     height: 60px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 6px;
+    border: 1px solid ;
+    border-radius: 0px;
     background: none;
-    color: aliceblue;
+    color: #ffffff;
     padding: 5px;
     margin: 10px;
 }
@@ -102,7 +120,6 @@
     transition: 600ms;
 }
 
-
 /* empty cart */
 
 .cartEmptyBox{
@@ -118,4 +135,55 @@
 .cartEmptyBox p{
     margin-top: 100px;
     font-size: 40px;
+}
+
+/* Cart Form */
+
+.formCart{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 450px;
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.formCart form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(236, 236, 236);
+
+}
+
+.formCart input {
+    width: 300px;
+    height: 50px;
+    margin: 15px;
+    padding: 10px;
+    color: #000000;
+}
+
+.formCart input::placeholder{
+    color: #000000;
+    font-size: 1.5vw;
+}
+
+.formCart button{
+    width: 100px;
+    height: 60px;
+    font-size: medium;
+    margin: 0px;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    color: #ffffff;
+}
+
+.formCart button:hover{
+    background-color: #343a40;
+    transition: 500ms;
 }

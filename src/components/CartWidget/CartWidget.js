@@ -6,7 +6,7 @@ export const CartWidget = () => {
 
     const cartContext = useContext(CartContext);
     const {cart} = cartContext;
-    console.log(cart);
+    
         return(
             <>
                 <div>
