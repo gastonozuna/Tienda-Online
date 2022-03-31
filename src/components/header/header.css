@@ -4,5 +4,14 @@
     height: 300px;
     background-image: url(./headerImages/bg-header.jpg);
     background-position: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+.headerBox h1{
+    color: #ffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5vw;
+    margin: 10px;
+}

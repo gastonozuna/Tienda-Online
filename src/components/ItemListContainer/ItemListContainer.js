@@ -42,20 +42,6 @@ const ItemListContainer = () => {
         }
     }
 
-    const getDataCategory = async (categoryId) =>{
-
-        try {
-            const itemsCollection = collection(db, 'items');
-            const col = await getDocs(itemsCollection);
-            const result = col.docs.map((doc)=> doc = {id: doc.id, ...doc.data()});
-            setItems(result.filter(e=> e.category === categoryId));
-            console.log(result);
-        } catch (error) {
-            console.error('error', error)
-        }
-
-    }
-
     const getDataCategory_query = async () => {
         try{
             const q = query(collection(db, 'items'), where('categoryId', '==', id));

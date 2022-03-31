@@ -23,39 +23,19 @@ function NavBar() {
     return(
 
         <nav className='navBar'>
+            
             <Link to='/'>
                 <div><img className='navLogo' src={logo}/></div>
             </Link>
             <NavLink to='/' className='navButton' activeclassname='active'>Inicio</NavLink>
 
-            <Link to='/items/categoryId'>
+            <Link to='/category/Sustratos'>
             <div  className='navButton' id='categories'>Sustratos 
             </div>
             </Link>
 
-            <Link to='/items/categoryId'>Fertilizantes</Link>
-            <div className='categoriesBox'>
-                
-                
-                <div className='catLinksBox'>
-                <a href='#'>Namaste</a>
-                </div>
-               
-                
-                <div className='catLinksBox'>
-                <a href='#'>Melaca Dorada</a>
-                </div>
-                
-                <div className='catLinksBox'>
-                <a href='#'>Otros</a>
-                </div>
+            <Link to='/category/Fertilizantes'>Fertilizantes</Link>
             
-            </div>
-            <div className='searchBox'>
-            <input type='text' placeholder=' Buscar...'></input>
-            <a href='#'/><div className='navSearchButton'><i className="fas fa-search"></i></div><a/>
-            </div>
-            <Link to='/' className='navButton' >Iniciar sesion/Registrarse</Link>
             <NavLink to='/Cart' activeclassname='active'>
                 <CartWidget count={0}/>
             </NavLink>

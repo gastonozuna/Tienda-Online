@@ -4,16 +4,14 @@ import './Cart.css';
 import { Link } from 'react-router-dom';
 import { collection, Timestamp, addDoc } from 'firebase/firestore';
 import { db } from '../utils/firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Cart = () => {
 
     const {cart} = useContext(CartContext);
     const {deleteItemById} = useContext(CartContext);
     const {clearCart} = useContext(CartContext);
-
-    
-    let formCart = document.querySelector('.formCart');
-    
 
     const sendOrder = async (e) => {
         try{
@@ -41,19 +39,23 @@ export const Cart = () => {
                     const queryCollection = collection(db, 'orders');
                     console.log('order', order);
                     const docRef = await addDoc(queryCollection, order)
-                    console.log('docref', docRef);
+                    console.log('docref', docRef.id);
 
                     e.target[0].value = "";
                     e.target[1].value = "";
-                    e.target[2].value = "";
+                    e.target[2].value = ""; 
+
+                    notify(buyer, docRef);
+                    
                 }
                 
-        } catch(error){
-            console.log('error', error);
+            } catch(error){
+                console.log('error', error);
+            }
+            
         }
-
-    }
- 
+        
+    const notify = (buyer, info) => toast(`Compra realizada. Muchas gracias ${buyer.name}! - El id de la orden es: ${info.id}`);
 
     if(cart.length !== 0){
         return(
@@ -69,8 +71,6 @@ export const Cart = () => {
                 
                 <div>
                     <button className='clearCart' onClick={clearCart}>Limpar Carrito</button>
-                    {//<button className='endBuy' onClick={()=> console.log('nada')}>Finalizar Compra</button>
-                    }
                 </div>
             
             <h2>Carrito </h2>
@@ -106,7 +106,17 @@ export const Cart = () => {
                     <input type='tel' placeholder='Telefono'></input>
                     <input type='email' placeholder='Correo'></input>
 
-                    <button type='submit'>Finalizar compra</button>    
+                    <button type='submit' >Finalizar compra</button>
+                    <ToastContainer position="top-center"
+                        autoClose={5000}
+                        hideProgressBar={true}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />   
                  </form>
             </div>
 
@@ -124,6 +134,7 @@ export const Cart = () => {
         </Link>
             <h2>Carrito </h2>
             <p>El carrito esta vacío :(</p>
+            <p>Vuelve al menu principal para seleccionar un producto</p>
         </div>
         </>
     )

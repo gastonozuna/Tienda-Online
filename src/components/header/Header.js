@@ -6,7 +6,7 @@ const Header = () => {
     return(
 
        <div className='headerBox'>
-           
+           <h1>Cogosaurio Growshop</h1>
        </div>
 
     )
