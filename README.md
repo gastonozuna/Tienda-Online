@@ -7,7 +7,7 @@ Los datos de los productos son traidos de una base de datos no relacional usando
 
 Visual:
 
-(importar GIF)
+![proyecto-final](https://user-images.githubusercontent.com/70909358/161291477-06cd06f3-bafb-4494-a097-342497593f0b.gif)
 
 Instalacion: 
 
