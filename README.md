@@ -23,3 +23,5 @@ npm start
 Librerias:
 
 react, react-router-dom, react-bootstrap, firebase.
+
+(El proyecto se encuentra en la rama master)
