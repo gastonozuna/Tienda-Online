@@ -18,81 +18,17 @@
 
 .navButton{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .navButton:hover{
     border-bottom: 1px solid black;
-    transition: 800ms;
-}
-
-/* Categories */
-
-.categoriesBox{
-    display: none;
-    position: absolute;
-    left: 25%;
-    flex-direction: row;
-    width: 200px;
-    height: 300px;
-    background-color: rgb(102, 100, 100);
-    border-radius: 10px;
-    top: 60px;
-
-}
-
-.catLinksBox{
-    margin: 15px 10px 20px 10px;
-}
-
-
-.categoriesBox a{
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-}
-
-.categoriesBox a:hover{
-    border-bottom: 1px solid black;
-}
-
-/* Search */
-
-.searchBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.searchBox input{
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-    font-size: 15px;
-}
-
-.searchBox input:focus{
-    background-color: rgb(240, 240, 240);
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-}
-
-.navSearchButton:hover{
-    color: rgb(62, 127, 187);
-    cursor: pointer;
-}
-
-.fa-search{
-    font-size: 20px;
-    padding: 5px;
+    transition: 2000ms;
 }
 
 .active{
     color: white;
-    background-color: rgb(123, 143, 125);
+    background-color: rgb(50, 75, 53);
     padding: 10px;
     border-radius: 10px;
 }

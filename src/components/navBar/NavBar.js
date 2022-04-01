@@ -27,14 +27,12 @@ function NavBar() {
             <Link to='/'>
                 <div><img className='navLogo' src={logo}/></div>
             </Link>
+
             <NavLink to='/' className='navButton' activeclassname='active'>Inicio</NavLink>
 
-            <Link to='/category/Sustratos'>
-            <div  className='navButton' id='categories'>Sustratos 
-            </div>
-            </Link>
+            <NavLink to='/category/Sustratos' className='navButton' activeclassname='active'>Sustratos </NavLink>
 
-            <Link to='/category/Fertilizantes'>Fertilizantes</Link>
+            <NavLink to='/category/Fertilizantes' className='navButton' activeclassname='active'>Fertilizantes</NavLink>
             
             <NavLink to='/Cart' activeclassname='active'>
                 <CartWidget count={0}/>
